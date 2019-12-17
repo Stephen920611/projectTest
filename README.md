@@ -1,2 +1,2 @@
 # projectTest
-react-native 测试安卓
+react-native   测试安卓
