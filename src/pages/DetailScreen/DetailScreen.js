@@ -1,25 +1,23 @@
-/**
- * @description
- * @Version Created by user on 2019/12/17.
- * @Author user
- * @license dongfangdianzi
- */
 import React from 'react';
 import {
     View,
     Text,
     Button,
 } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
+
+class LogoTitle extends React.Component {
+    render() {
+        return <Ionicons name='ios-add' size={25} color={tintColor} />
+    }
+}
 
 class DetailScreen extends React.Component {
     componentDidMount() {
         // console.log('Details',this.props);
         // console.warn('YellowBox is disabled.');
     }
-    static navigationOptions = {
-        tabBarLabel: 'Details',
-        headerTitle: '好友',
-    };
     render() {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>

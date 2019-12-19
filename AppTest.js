@@ -19,10 +19,25 @@ const App = createStackNavigator({
         // FindAccount: {screen: FindAccountPage}, // 找回密码页
         Main: {
             screen: TabNav,
-            navigationOptions: ({navigation}) => ({
-                // header: null  // 顶部标题
-            })
-        }
+            /*navigationOptions: ({navigation}) => ({
+                header: null  // 顶部标题
+            })*/
+            navigationOptions: ({navigation}) => {
+                const titleMap = {
+                    Home: '首页',
+                    Details: '我的'
+                };
+                // 根据路由的顺序以及路由名定义title
+                const result = {
+                    title: titleMap[navigation.state.routes[navigation.state.index].routeName],
+                    headerBackTitle: null
+                };
+                if(navigation.state.routes[navigation.state.index].routeName === 'Mine'){
+                    return {header: null}
+                }
+                return result;
+            }
+        },
     },
     {
         initialRouteName: 'Main',

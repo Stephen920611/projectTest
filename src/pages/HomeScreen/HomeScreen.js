@@ -12,7 +12,7 @@ class HomeScreen extends React.Component {
     }
     //tab键的名字，app.js设置也可以
     //顶部标题
-    static navigationOptions = {
+    /*static navigationOptions = {
         title: 'Home',
         headerStyle: {
             backgroundColor: '#f4511e',
@@ -22,7 +22,7 @@ class HomeScreen extends React.Component {
             fontWeight: 'bold',
         },
     };
-
+*/
     render() {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
