@@ -45,29 +45,3 @@ const App = createStackNavigator({
     });
 
 export default createAppContainer(App);
-
-/*
-export default class FlexDimensionsBasics extends Component {
-
-    render() {
-        return (
-            // 试试去掉父View中的`flex: 1`。
-            // 则父View不再具有尺寸，因此子组件也无法再撑开。
-            // 然后再用`height: 300`来代替父View的`flex: 1`试试看？
-            <>
-                {/!*<View style={{height: 300}}>
-                    <FontAwesome
-                        name="angle-left"
-                        size={26}
-                        style={{ color: 'black' }}
-                    />
-                    <View style={{flex: 1, backgroundColor: 'powderblue'}} />
-                    <View style={{flex: 2, backgroundColor: 'skyblue'}} />
-                    <View style={{flex: 3, backgroundColor: 'steelblue'}} />
-                </View>*!/}
-                <TabContainer />
-            </>
-
-        );
-    }
-}*/

@@ -6,15 +6,10 @@ import {
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
-class MineScreen extends React.Component {
+export default class MineScreen extends React.Component {
     componentDidMount() {
         // console.log('Home',this.props);
     }
-    //tab键的名字，app.js设置也可以
-    //顶部标题
-    /*static navigationOptions = {
-        title: 'MineScreen',
-    };*/
 
     render() {
         return (
@@ -28,4 +23,3 @@ class MineScreen extends React.Component {
         );
     }
 }
-export default MineScreen;

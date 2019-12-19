@@ -13,7 +13,7 @@ class LogoTitle extends React.Component {
     }
 }
 
-class DetailScreen extends React.Component {
+export default class DetailScreen extends React.Component {
     componentDidMount() {
         // console.log('Details',this.props);
         // console.warn('YellowBox is disabled.');
@@ -34,4 +34,3 @@ class DetailScreen extends React.Component {
         );
     }
 }
-export default DetailScreen;

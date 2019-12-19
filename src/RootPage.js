@@ -21,19 +21,19 @@ export const TabNav = createBottomTabNavigator(
             screen: DetailsScreen,
         },
         Mine: {
-            /*screen: createStackNavigator(
-                {
-                    Mine: {
-                        screen: MineScreen,
-                        navigationOptions: {
-                            headerTitle: 'Mine',
-                            tabBarLabel: '统计3',
-                            tabBarPosition: 'bottom',
-                        }
-                    }
-                })*/
+            // screen: createStackNavigator(
+            //     {
+            //         Mine: {
+            //             screen: MineScreen,
+            //             navigationOptions: {
+            //                 headerTitle: 'Mine',
+            //                 tabBarLabel: '统计3',
+            //                 tabBarPosition: 'bottom',
+            //             }
+            //         }
+            //     }
+            // )
             screen: MineScreen,
-
         }
     },
     {
@@ -41,15 +41,16 @@ export const TabNav = createBottomTabNavigator(
             tabBarIcon: ({ focused, horizontal, tintColor }) => {
                 const { routeName } = navigation.state;
                 let iconName;
-                if (routeName === 'Home') {
-                    // iconName = `ios-information-circle${focused ? '' : '-outline'}`;
-                    iconName = 'ios-home';
-                    return <Ionicons name={iconName} size={25} color={tintColor} />;
-                } else if (routeName === 'Details') {
-                    iconName = 'md-add';
-                    // return <FontAwesome name='home' size={25} color={tintColor} />;
-                } else if(routeName === 'Mine'){
-                    iconName = 'ios-person';
+                switch (routeName){
+                    case 'Home':
+                        iconName = 'ios-home';
+                        break;
+                    case 'Details':
+                        iconName = 'md-add';
+                        break;
+                    case 'Mine':
+                        iconName = 'ios-person';
+                        break;
                 }
 
                 return <Ionicons name={iconName} size={25} color={tintColor} />;
@@ -98,4 +99,4 @@ export const TabNav = createBottomTabNavigator(
         //返回按钮是否会导致tab切换到初始tab页？ 如果是，则设置为initialRoute，否则为none。 缺省为initialRoute。
         backBehavior: 'none',
     }
-    );
+);

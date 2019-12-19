@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
-class HomeScreen extends React.Component {
+export default class HomeScreen extends React.Component {
     componentDidMount() {
         // console.log('Home',this.props);
     }
@@ -44,4 +44,3 @@ class HomeScreen extends React.Component {
         );
     }
 }
-export default HomeScreen;
