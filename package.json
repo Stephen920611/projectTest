@@ -10,6 +10,7 @@
         "lint": "eslint ."
     },
     "dependencies": {
+        "immutability-helper": "^3.0.1",
         "react": "16.9.0",
         "react-native": "0.61.5",
         "react-native-gesture-handler": "^1.0.0",
@@ -19,7 +20,10 @@
         "react-navigation": "^4.0.10",
         "react-navigation-drawer": "^2.3.3",
         "react-navigation-stack": "^1.10.3",
-        "react-navigation-tabs": "^2.5.6"
+        "react-navigation-tabs": "^2.5.6",
+        "react-redux": "^7.1.3",
+        "redux": "^4.0.4",
+        "redux-logger": "^3.0.6"
     },
     "devDependencies": {
         "@babel/core": "^7.7.5",
