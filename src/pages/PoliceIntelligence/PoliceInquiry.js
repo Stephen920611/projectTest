@@ -29,6 +29,19 @@ class PoliceInquiry extends React.Component {
             upload: 'yes',
         }
     }
+    static navigationOptions = ({ navigation,state }) => {
+        // console.log('navigation',state);
+        // console.log('this.props',navigation.getParam('total'));
+        return {
+            headerBackTitle: '返回',
+            title: navigation.getParam('headerTitle'),
+            headerStyle: {
+                backgroundColor: '#fff'
+            }
+            // +2
+            //   -0
+        };
+    };
 
     componentDidMount() {
         // console.log('Home',this.props);

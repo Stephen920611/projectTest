@@ -23,7 +23,8 @@ class HomeScreen extends React.Component {
                 address: 'PoliceIntelligence'
             },
             {
-                title: '情报池'
+                title: '情报池',
+                address: 'PolicePool'
             },
             {
                 title: '案件库'
@@ -111,8 +112,8 @@ class HomeScreen extends React.Component {
         )
     };
     handlePress = (item, e) => {
-        // this.props.navigation.navigate(item.hasOwnProperty('address') ? item.address:'');
-        this.props.navigation.push('PoliceIntelligence');
+        this.props.navigation.navigate(item.hasOwnProperty('address') ? item.address:'');
+        // this.props.navigation.push('PoliceIntelligence');
     };
 
     render() {
@@ -139,7 +140,7 @@ class HomeScreen extends React.Component {
                     tabBarActiveTextColor='#1890ff'
                     tabBarTextStyle={styles.tabView}
                 >
-                    <ScrollView tabLabel="部门上传排行" style={styles.scrollViewCon}>
+                    <ScrollView tabLabel="部门上传排行" >
                         {this.renderItem()}
                         <TouchableOpacity
                             onPress={() => {
@@ -158,10 +159,8 @@ class HomeScreen extends React.Component {
                             </View>
                         </TouchableOpacity>
                     </ScrollView>
-                    <ScrollView tabLabel="个人上传排行">
-                        <View style={styles.textStyle}>
-                            <Text >周边警情列表</Text>
-                        </View>
+                    <ScrollView tabLabel="个人上传排行" style={styles.scrollViewCon}>
+                        {this.renderItem()}
                     </ScrollView>
                 </ScrollableTabView>
 

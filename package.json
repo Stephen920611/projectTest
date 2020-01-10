@@ -18,6 +18,8 @@
         "moment": "^2.24.0",
         "react": "16.9.0",
         "react-native": "0.61.5",
+        "react-native-amap-geolocation": "^1.0.4",
+        "react-native-amap3d": "^1.1.1",
         "react-native-action-button": "^2.8.5",
         "react-native-datepicker": "^1.7.2",
         "react-native-gesture-handler": "^1.0.0",

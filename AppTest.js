@@ -19,6 +19,7 @@ import PoliceClue from './src/pages/PoliceIntelligence/PoliceClue';
 import PeopleInvolved from './src/pages/PoliceIntelligence/PeopleInvolved';
 import PoliceMap from './src/pages/PoliceIntelligence/PoliceMap';
 import PoliceIntelligence from './src/pages/PoliceIntelligence/PoliceIntelligence';
+import PolicePool from './src/pages/PolicePool/PolicePool';
 
 // import LoginPage from "./page/Login/loginPage";
 // import {FindAccountPage} from "./page/Login/findAccountPage"; // 路由导航
@@ -68,13 +69,13 @@ const App = createStackNavigator({
         },
         PoliceInquiry: {//警情事件查询
             screen: PoliceInquiry,
-            navigationOptions: () => ({
+            /*navigationOptions: () => ({
                 headerBackTitle: '返回',
                 title:'警情事件查询',
                 headerStyle:{
                     backgroundColor:'#fff'
                 }
-            }),
+            }),*/
         },
         PoliceMessage: {//警情库
             screen: PoliceMessage,
@@ -114,6 +115,16 @@ const App = createStackNavigator({
             navigationOptions: () => ({
                 headerBackTitle: '返回',
                 title:'地图信息',
+                headerStyle:{
+                    backgroundColor:'#fff'
+                }
+            }),
+        },
+        PolicePool: {//警情池
+            screen: PolicePool,
+            navigationOptions: () => ({
+                headerBackTitle: '返回',
+                title:'警情池',
                 headerStyle:{
                     backgroundColor:'#fff'
                 }

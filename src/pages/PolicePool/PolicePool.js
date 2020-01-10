@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
-export default class PoliceIntelligence extends React.Component {
+export default class PolicePool extends React.Component {
     componentDidMount() {
         // console.log('Home',this.props.navigation.navigate('PoliceInquiry'));
     }
@@ -25,11 +25,11 @@ export default class PoliceIntelligence extends React.Component {
                 />*/}
                 <View style={{marginBottom:10}}>
                     <Button
-                        title="警情事件查询"
+                        title="警情池查询"
                         onPress={() => {
                             // this.props.navigation.navigate('PoliceClue')
                             this.props.navigation.navigate('PoliceInquiry', {
-                                headerTitle: '警情事件查询',
+                                headerTitle: '警情池查询',
                             });
                         }}
                         // onPress={() => this.props.navigation.navigate('PoliceInquiry')}
@@ -37,7 +37,7 @@ export default class PoliceIntelligence extends React.Component {
                 </View>
                 <View style={{marginBottom:10}}>
                     <Button
-                        title="警情库"
+                        title="警情池"
                         onPress={() => this.props.navigation.navigate('PoliceMessage')}
                     />
                 </View>
@@ -47,37 +47,7 @@ export default class PoliceIntelligence extends React.Component {
                         onPress={() => this.props.navigation.navigate('PoliceDetails')}
                     />
                 </View>
-                <View style={{marginBottom:10}}>
-                    <Button
-                        title="警情线索"
-                        onPress={() => {
-                            // this.props.navigation.navigate('PoliceClue')
-                            this.props.navigation.navigate('PoliceClue', {
-                                total: '86',
-                            });
-                        }}
-                    />
-                </View>
-                <View style={{marginBottom:10}}>
-                    <Button
-                        title="涉案人员"
-                        onPress={() => {
-                            // this.props.navigation.setParams({ total: 222 });
-                            // this.props.navigation.navigate('PeopleInvolved')
-                            this.props.navigation.navigate('PeopleInvolved', {
-                                total: '222',
-                            });
-                        }}
-                    />
-                </View>
-                <View style={{marginBottom:10}}>
-                    <Button
-                        title="地图信息"
-                        onPress={() => {
-                            this.props.navigation.navigate('PoliceMap');
-                        }}
-                    />
-                </View>
+
                 <Button
                     title="Go back"
                     onPress={() => this.props.navigation.goBack()}
