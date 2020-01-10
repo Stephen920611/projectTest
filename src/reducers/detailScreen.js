@@ -16,7 +16,7 @@ const initState = {
 };
 
 // detailScreenReducer.reducer = 'detailScreenReducer';
-function detailScreenReducer(state = initState, action) {
+export default function detailScreenReducer(state = initState, action) {
     switch (action.type) {
         case actionTypes.TEST_DETAIL_SCREEN:
             return update(state, {
@@ -27,6 +27,6 @@ function detailScreenReducer(state = initState, action) {
     }
 }
 
-export default combineReducers({
-    detailScreenReducer
-});
+// export default combineReducers({
+//     detailScreenReducer
+// });

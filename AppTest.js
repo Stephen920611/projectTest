@@ -12,22 +12,43 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {TabNav} from "./src/index";
 import A from './src/pages/DetailScreen/DetailScreen';
+import TabBarPage from "./src/pages/TabBar/TabBarPage";
+import PoliceInquiry from './src/pages/PoliceIntelligence/PoliceInquiry';
+import PoliceMessage from './src/pages/PoliceIntelligence/PoliceMessage';
+import PoliceDetails from './src/pages/PoliceIntelligence/PoliceDetails';
+import PoliceClue from './src/pages/PoliceIntelligence/PoliceClue';
+import PeopleInvolved from './src/pages/PoliceIntelligence/PeopleInvolved';
+import PoliceMap from './src/pages/PoliceIntelligence/PoliceMap';
+import PoliceIntelligence from './src/pages/PoliceIntelligence/PoliceIntelligence';
+
 // import LoginPage from "./page/Login/loginPage";
 // import RegPage from "./page/Login/regPage";
 // import {FindAccountPage} from "./page/Login/findAccountPage"; // 路由导航
+import HomeScreen from './src/pages/HomeScreen/HomeScreen';
+
 
 const App = createStackNavigator({
         // Login: {screen: LoginPage}, // 登录页
         // Reg: {screen: RegPage}, // 注册页
         // FindAccount: {screen: FindAccountPage}, // 找回密码页
-        Main: {
+        TabBar:{
+            screen:TabBarPage,
+            navigationOptions: () => ({
+                headerBackTitle: null,
+                title:'基础搜车',
+                headerStyle:{
+                    backgroundColor:'#fff'
+                }
+            }),
+        }, //顶部tab页
+        /*Main: {
             screen: TabNav,
-            /*navigationOptions: ({navigation}) => ({
+            /!*navigationOptions: ({navigation}) => ({
                 header: null  // 顶部标题
-            })*/
+            })*!/
             navigationOptions: ({navigation}) => {
                 const titleMap = {
-                    Home: '首页',
+                    Home: '警情库',
                     Details: '我的'
                 };
                 // 根据路由的顺序以及路由名定义title
@@ -40,10 +61,79 @@ const App = createStackNavigator({
                 }
                 return result;
             }
+        },*/
+        HomeScreen: {
+            screen: HomeScreen,
+            navigationOptions: {
+                title: '首页',
+            }
+        },
+        PoliceIntelligence: {//警情库
+            screen: PoliceIntelligence,
+            navigationOptions: () => ({
+                headerBackTitle: '返回',
+                title:'警情库',
+                headerStyle:{
+                    backgroundColor:'#fff'
+                }
+            }),
+        },
+        PoliceInquiry: {//警情事件查询
+            screen: PoliceInquiry,
+            navigationOptions: () => ({
+                headerBackTitle: '返回',
+                title:'警情事件查询',
+                headerStyle:{
+                    backgroundColor:'#fff'
+                }
+            }),
+        },
+        PoliceMessage: {//警情库
+            screen: PoliceMessage,
+            navigationOptions: () => ({
+                headerBackTitle: '返回',
+                title:'警情库',
+                headerStyle:{
+                    backgroundColor:'#fff'
+                }
+            }),
+        },
+        PoliceDetails: {//警情详情
+            screen: PoliceDetails,
+            navigationOptions: () => ({
+                headerBackTitle: '返回',
+                title:'警情详情',
+                headerStyle:{
+                    backgroundColor:'#fff'
+                }
+            }),
+        },
+        PoliceClue: {//警情线索
+            screen: PoliceClue,
+           /* navigationOptions: () => ({
+                headerBackTitle: '返回',
+                title:'警情线索',
+                headerStyle:{
+                    backgroundColor:'#fff'
+                }
+            }),*/
+        },
+        PeopleInvolved:{//涉案人员
+            screen: PeopleInvolved,
+        },
+        PoliceMap: {//地图信息
+            screen: PoliceMap,
+            navigationOptions: () => ({
+                headerBackTitle: '返回',
+                title:'地图信息',
+                headerStyle:{
+                    backgroundColor:'#fff'
+                }
+            }),
         },
     },
     {
-        initialRouteName: 'Main',
+        initialRouteName: 'HomeScreen',
         headerMode: 'screen'
     });
 

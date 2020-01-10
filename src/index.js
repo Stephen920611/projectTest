@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { View } from 'react-native';
+import React, {Component} from 'react';
+import {View} from 'react-native';
 
 //路由
 import {createAppContainer} from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-import { createBottomTabNavigator} from 'react-navigation-tabs';
+import {createStackNavigator} from 'react-navigation-stack';
+import {createBottomTabNavigator} from 'react-navigation-tabs';
 import 'react-native-gesture-handler';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 // import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -16,6 +16,9 @@ export const TabNav = createBottomTabNavigator(
     {
         Home: {
             screen: HomeScreen,
+            navigationOptions: {
+                tabBarLabel: '警情库',
+            }
         },
         Details: {
             screen: DetailsScreen,
@@ -37,11 +40,11 @@ export const TabNav = createBottomTabNavigator(
         }
     },
     {
-        defaultNavigationOptions: ({ navigation }) => ({
-            tabBarIcon: ({ focused, horizontal, tintColor }) => {
-                const { routeName } = navigation.state;
+        defaultNavigationOptions: ({navigation}) => ({
+            tabBarIcon: ({focused, horizontal, tintColor}) => {
+                const {routeName} = navigation.state;
                 let iconName;
-                switch (routeName){
+                switch (routeName) {
                     case 'Home':
                         iconName = 'ios-home';
                         break;
@@ -53,7 +56,7 @@ export const TabNav = createBottomTabNavigator(
                         break;
                 }
 
-                return <Ionicons name={iconName} size={25} color={tintColor} />;
+                return <Ionicons name={iconName} size={25} color={tintColor}/>;
             },
         }),
         tabBarOptions: {
@@ -76,7 +79,7 @@ export const TabNav = createBottomTabNavigator(
                 backgroundColor: '#b2b2b2',
                 paddingBottom: 1,
                 borderTopWidth: 0.2,
-                paddingTop:1,
+                paddingTop: 1,
                 borderTopColor: '#ccc',
             },
             //tab bar的文本样式
