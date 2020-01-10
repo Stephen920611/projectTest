@@ -12,7 +12,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {TabNav} from "./src/index";
 import A from './src/pages/DetailScreen/DetailScreen';
-import TabBarPage from "./src/pages/TabBar/TabBarPage";
 import PoliceInquiry from './src/pages/PoliceIntelligence/PoliceInquiry';
 import PoliceMessage from './src/pages/PoliceIntelligence/PoliceMessage';
 import PoliceDetails from './src/pages/PoliceIntelligence/PoliceDetails';
@@ -31,16 +30,6 @@ const App = createStackNavigator({
         // Login: {screen: LoginPage}, // 登录页
         // Reg: {screen: RegPage}, // 注册页
         // FindAccount: {screen: FindAccountPage}, // 找回密码页
-        TabBar:{
-            screen:TabBarPage,
-            navigationOptions: () => ({
-                headerBackTitle: null,
-                title:'基础搜车',
-                headerStyle:{
-                    backgroundColor:'#fff'
-                }
-            }),
-        }, //顶部tab页
         /*Main: {
             screen: TabNav,
             /!*navigationOptions: ({navigation}) => ({
