@@ -21,7 +21,6 @@ import PoliceMap from './src/pages/PoliceIntelligence/PoliceMap';
 import PoliceIntelligence from './src/pages/PoliceIntelligence/PoliceIntelligence';
 
 // import LoginPage from "./page/Login/loginPage";
-// import RegPage from "./page/Login/regPage";
 // import {FindAccountPage} from "./page/Login/findAccountPage"; // 路由导航
 import HomeScreen from './src/pages/HomeScreen/HomeScreen';
 
