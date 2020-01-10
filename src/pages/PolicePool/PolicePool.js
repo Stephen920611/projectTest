@@ -38,13 +38,13 @@ export default class PolicePool extends React.Component {
                 <View style={{marginBottom:10}}>
                     <Button
                         title="警情池"
-                        onPress={() => this.props.navigation.navigate('PoliceMessage')}
+                        onPress={() => this.props.navigation.navigate('PolicePoolMessage')}
                     />
                 </View>
                 <View style={{marginBottom:10}}>
                     <Button
                         title="警情详情"
-                        onPress={() => this.props.navigation.navigate('PoliceDetails')}
+                        onPress={() => this.props.navigation.navigate('PolicePoolDetails')}
                     />
                 </View>
 

@@ -20,6 +20,8 @@ import PeopleInvolved from './src/pages/PoliceIntelligence/PeopleInvolved';
 import PoliceMap from './src/pages/PoliceIntelligence/PoliceMap';
 import PoliceIntelligence from './src/pages/PoliceIntelligence/PoliceIntelligence';
 import PolicePool from './src/pages/PolicePool/PolicePool';
+import PolicePoolMessage from './src/pages/PolicePool/PolicePoolMessage';
+import PolicePoolDetails from './src/pages/PolicePool/PolicePoolDetails';
 
 // import LoginPage from "./page/Login/loginPage";
 // import {FindAccountPage} from "./page/Login/findAccountPage"; // 路由导航
@@ -125,6 +127,26 @@ const App = createStackNavigator({
             navigationOptions: () => ({
                 headerBackTitle: '返回',
                 title:'警情池',
+                headerStyle:{
+                    backgroundColor:'#fff'
+                }
+            }),
+        },
+        PolicePoolMessage: {//警情池
+            screen: PolicePoolMessage,
+            /*navigationOptions: () => ({
+                headerBackTitle: '返回',
+                title:'警情池',
+                headerStyle:{
+                    backgroundColor:'#fff'
+                }
+            }),*/
+        },
+        PolicePoolDetails: {//警情详情
+            screen: PolicePoolDetails,
+            navigationOptions: () => ({
+                headerBackTitle: '返回',
+                title:'警情详情',
                 headerStyle:{
                     backgroundColor:'#fff'
                 }
